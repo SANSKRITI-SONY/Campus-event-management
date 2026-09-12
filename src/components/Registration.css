@@ -1,0 +1,87 @@
+.registration-section {
+  padding: 100px 6%;
+  border-top: 1px solid #111111;
+}
+
+.registration-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 70px;
+}
+
+.registration-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 60px;
+}
+
+.registration-heading h2 {
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -4px;
+  font-weight: 900;
+}
+
+.registration-heading h2 span {
+  color: #d43b2f;
+}
+
+.registration-heading p {
+  margin-top: 35px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.registration-form {
+  border-top: 1px solid #111111;
+}
+
+.form-group {
+  padding: 22px 0;
+  border-bottom: 1px solid #111111;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select {
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: #111111;
+}
+
+.form-group input::placeholder {
+  color: #777777;
+}
+
+.register-button {
+  margin-top: 25px;
+  padding: 16px 24px;
+
+  border: 1px solid #111111;
+  background: #111111;
+  color: #f4f0e8;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background: #d43b2f;
+  border-color: #d43b2f;
+}
