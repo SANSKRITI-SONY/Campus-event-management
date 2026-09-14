@@ -10,7 +10,7 @@ function Dashboard() {
   useEffect(() => {
     async function getRegistrations() {
       const response = await fetch(
-        `http://localhost:5000/api/registrations/${user.id}`
+        `https://campus-event-backend-a97k.onrender.com/api/registrations/${user.id}`
       );
 
       const data = await response.json();

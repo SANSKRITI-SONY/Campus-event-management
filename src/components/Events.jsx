@@ -15,7 +15,7 @@ function Events() {
     async function getEvents() {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/events"
+          "https://campus-event-backend-a97k.onrender.com/api/events"
         );
 
         const data = await response.json();
@@ -40,7 +40,7 @@ function Events() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/registrations",
+        "https://campus-event-backend-a97k.onrender.com/api/registrations",
         {
           method: "POST",
           headers: {

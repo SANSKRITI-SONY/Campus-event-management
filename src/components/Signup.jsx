@@ -24,7 +24,7 @@ function Signup() {
     e.preventDefault();
 
     const response = await fetch(
-      "http://localhost:5000/api/auth/signup",
+      "https://campus-event-backend-a97k.onrender.com/api/auth/signup",
       {
         method: "POST",
         headers: {

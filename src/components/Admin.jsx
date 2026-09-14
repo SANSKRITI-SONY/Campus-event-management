@@ -25,7 +25,7 @@ function Admin() {
     async function getEvents() {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/events"
+          "https://campus-event-backend-a97k.onrender.com/api/events"
         );
 
         const data = await response.json();
@@ -84,8 +84,8 @@ function Admin() {
     e.preventDefault();
 
     const url = editingEvent
-      ? `http://localhost:5000/api/events/${editingEvent.id}`
-      : "http://localhost:5000/api/events";
+      ? `https://campus-event-backend-a97k.onrender.com/api/events/${editingEvent.id}`
+      : "https://campus-event-backend-a97k.onrender.com/api/events";
 
     const method = editingEvent ? "PUT" : "POST";
 
@@ -149,7 +149,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/events/${eventId}`,
+        `https://campus-event-backend-a97k.onrender.com/api/events/${eventId}`,
         {
           method: "DELETE",
         }
@@ -188,7 +188,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/events/${event.id}/participants`
+        `https://campus-event-backend-a97k.onrender.com/api/events/${event.id}/participants`
       );
 
       const data = await response.json();
