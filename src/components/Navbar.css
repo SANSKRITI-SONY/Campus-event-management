@@ -1,51 +1,130 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #f4f0e8;
-  color: #111111;
-  font-family: Arial, sans-serif;
-}
-
-/* NAVBAR */
-
-header {
+.navbar {
   height: 80px;
   padding: 0 6%;
-  border-bottom: 1px solid #111111;
 
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  border-bottom: 1px solid #111111;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  color: #111111;
+  text-decoration: none;
+
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: -0.7px;
 }
 
-.navbar nav {
+.logo span:last-child {
+  color: #d43b2f;
+}
+
+.nav-links {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   gap: 32px;
 }
 
-.navbar a {
+.nav-links a {
+  position: relative;
+
   color: #111111;
   text-decoration: none;
-  font-size: 0.9rem;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 1px;
+
+  background: #111111;
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signup-button,
+.login-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+  padding: 0 17px;
+
+  text-decoration: none;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.signup-button {
+  color: #111111;
+  background: transparent;
+  border: 1px solid #111111;
+}
+
+.signup-button:hover {
+  background: #111111;
+  color: #f4f0e8;
 }
 
 .login-button {
-  background: #111111;
   color: #f4f0e8;
-  border: none;
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  background: #111111;
+  border: 1px solid #111111;
+}
+
+.login-button:hover {
+  background: #d43b2f;
+  border-color: #d43b2f;
+}
+
+.menu-button {
+  display: none;
+
+  border: 1px solid #111111;
+  background: transparent;
+
+  padding: 10px 14px;
+
+  color: #111111;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+
   cursor: pointer;
 }
