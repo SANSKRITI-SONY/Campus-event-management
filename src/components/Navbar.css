@@ -128,3 +128,83 @@
 
   cursor: pointer;
 }
+.mobile-menu-actions {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .navbar-actions {
+    gap: 7px;
+  }
+
+  .signup-button,
+  .login-button {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    height: 70px;
+    padding: 0 7%;
+  }
+
+  .navbar-actions {
+    display: none;
+  }
+
+  .menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 20;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 7% 22px;
+    background: #f4f0e8;
+    border-bottom: 1px solid #111111;
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+    border-bottom: 1px solid #111111;
+    font-size: 0.78rem;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .mobile-menu-actions {
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+  }
+
+  .mobile-menu-actions .signup-button,
+  .mobile-menu-actions .login-button {
+    flex: 1;
+  }
+}

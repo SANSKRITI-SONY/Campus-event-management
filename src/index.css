@@ -9,3 +9,24 @@ body {
   color: #111111;
   font-family: Arial, sans-serif;
 }
+/* Responsive safety rules */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}

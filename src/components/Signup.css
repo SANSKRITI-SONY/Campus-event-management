@@ -241,3 +241,40 @@
     padding: 60px 8%;
   }
 }
+@media (max-width: 1000px) {
+  .signup-form-area {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media (max-width: 800px) {
+  .signup-page {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .signup-intro {
+    min-height: auto;
+    padding: 28px 7% 35px;
+    border-right: none;
+    border-bottom: 1px solid #111111;
+  }
+
+  .signup-heading {
+    margin: 55px 0;
+  }
+
+  .signup-heading h1 {
+    font-size: clamp(4rem, 18vw, 7rem);
+    letter-spacing: -5px;
+  }
+
+  .signup-form-area {
+    padding: 55px 7% 70px;
+  }
+
+  .signup-form-area form {
+    width: 100%;
+  }
+}

@@ -70,3 +70,61 @@
   font-weight: 700;
   letter-spacing: 1px;
 }
+@media (max-width: 1000px) {
+  .about-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-text {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-section {
+    padding: 70px 7%;
+  }
+
+  .about-label {
+    margin-bottom: 45px;
+  }
+
+  .about-content h2 {
+    font-size: clamp(3rem, 15vw, 5.5rem);
+    letter-spacing: -3px;
+  }
+
+  .about-text {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .about-text > p {
+    font-size: 0.9rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .about-stats div {
+    padding: 16px 0;
+    border-right: none;
+    border-bottom: 1px solid #111111;
+  }
+
+  .about-stats div:not(:first-child) {
+    padding-left: 0;
+  }
+
+  .about-stats div:last-child {
+    border-bottom: none;
+  }
+}

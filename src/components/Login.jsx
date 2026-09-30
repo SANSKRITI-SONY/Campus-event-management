@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -22,28 +24,37 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const response = await fetch(
-      "https://campus-event-backend-a97k.onrender.com/api/auth/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      }
-    );
-
-    const data = await response.json();
-
-    if (response.ok) {
-      localStorage.setItem(
-        "user",
-        JSON.stringify(data.user)
+    try {
+      const response = await fetch(
+        "https://campus-event-backend-a97k.onrender.com/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
       );
 
-      setMessage("Login successful.");
-    } else {
-      setMessage(data.message);
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem(
+          "user",
+          JSON.stringify(data.user)
+        );
+
+        if (data.user.role === "admin") {
+          navigate("/admin");
+        } else {
+          navigate("/dashboard");
+        }
+      } else {
+        setMessage(data.message);
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      setMessage("Something went wrong. Please try again.");
     }
   }
 

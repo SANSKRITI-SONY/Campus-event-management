@@ -85,3 +85,48 @@
   background: #d43b2f;
   border-color: #d43b2f;
 }
+@media (max-width: 1000px) {
+  .registration-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .registration-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .registration-section {
+    padding: 70px 7%;
+  }
+
+  .registration-label {
+    margin-bottom: 45px;
+  }
+
+  .registration-heading h2 {
+    font-size: clamp(3rem, 15vw, 5.5rem);
+    letter-spacing: -3px;
+  }
+
+  .registration-heading p br {
+    display: none;
+  }
+
+  .registration-heading p {
+    margin-top: 25px;
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .register-button {
+    width: 100%;
+  }
+}

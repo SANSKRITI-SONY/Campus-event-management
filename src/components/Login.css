@@ -231,3 +231,44 @@
     padding: 60px 8%;
   }
 }
+@media (max-width: 1000px) {
+  .login-form-area {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media (max-width: 800px) {
+  .login-page {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .login-intro {
+    min-height: auto;
+    padding: 28px 7% 35px;
+    border-right: none;
+    border-bottom: 1px solid #111111;
+  }
+
+  .login-heading {
+    margin: 55px 0;
+  }
+
+  .login-heading h1 {
+    font-size: clamp(4rem, 18vw, 7rem);
+    letter-spacing: -5px;
+  }
+
+  .login-heading h2 {
+    margin-top: 30px;
+  }
+
+  .login-form-area {
+    padding: 55px 7% 70px;
+  }
+
+  .login-form-area form {
+    width: 100%;
+  }
+}

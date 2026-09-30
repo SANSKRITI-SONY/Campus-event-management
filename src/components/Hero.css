@@ -46,3 +46,46 @@
   border-bottom: 1px solid #111111;
   padding-bottom: 4px;
 }
+@media (max-width: 1000px) {
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(4rem, 11vw, 8rem);
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: calc(100svh - 70px);
+    padding: 25px 7% 30px;
+  }
+
+  .hero-top,
+  .hero-bottom {
+    font-size: 0.62rem;
+    gap: 20px;
+  }
+
+  .hero-content {
+    padding: 45px 0;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3.4rem, 16vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -3.5px;
+    overflow-wrap: break-word;
+  }
+
+  .hero-content p {
+    margin-top: 28px;
+    font-size: 0.95rem;
+  }
+
+  .hero-content p br {
+    display: none;
+  }
+}
